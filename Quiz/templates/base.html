@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block t %}Title {% endblock %}</title>
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body >
+ <header>
+     <nav>
+    <ul>
+        <li><button  onclick="location.href='{% url 'home' %}'">Home</button></li>
+        <li><button  onclick="location.href='{% url 'home' %}'">Amazon</button></li>
+        <li><button DISABLED onclick="location.href='{% url 'demo' %}'">FLIPKART</button></li>
+        <li><button  onclick="location.href='{% url 'contact' %}'">Contact</button></li>
+    </ul>
+</nav>
+     </header>
+ <main>
+     <h1>
+     {% block title %}
+        Amazon Quiz Answer Is Here
+     {% endblock  %}
+     </h1>
+
+
+    <div>
+     {% block content %}
+
+     <section >
+           <h2>Great Indian Festival</h2>
+              <a href="{% url 'demo' %}"><img align="center" border="2" height="350px" width="750px"  src="{% static 'images/2.png' %}" alt="Great"></a>
+              <br>
+              <button class="custom-button"  onclick="location.href='{% url 'demo' %}'">Click Here</button>
+     </section>
+     <br>
+
+     {% endblock %}
+     </div>
+
+     </main>
+
+
+
+ <footer>
+        <p >&copy; 2023 Your Website Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>

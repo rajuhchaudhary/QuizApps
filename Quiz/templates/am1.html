@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+amazon one
+{% block t %}
+amazon one
+{% endblock%}
+
+
+{% block title %}
+Amazon Daily  Quiz Answer Is Here
+{% endblock %}
+
+
+{% block content %}
+
+    <div>
+
+    {% if d %}
+
+
+      {% for i in d %}
+
+      <p class=main-paragraph align="left">
+          <b>{{i.n1}} . {{i.qns1}}<br> Ans : <p align="left" style="color: Green">{{ i.ans1}} </p><br></b>
+         </p>
+
+
+      {% endfor %}
+    {% endif %}
+     </div>
+
+{% endblock %}
